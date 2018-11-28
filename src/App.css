@@ -1,0 +1,251 @@
+/* ================================= 
+  Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+   font: 1em/1.5 'Roboto', sans-serif;
+   color: #d4caca;
+   background: rgb(248, 239, 239),
+   /* background: #201f1f;  */
+   /* background: #000c18; */
+/*    background: -webkit-linear-gradient(#313a42, #000c18 60%);
+   background: -moz-linear-gradient(#013971, #000c18 60%);
+   background: -o-linear-gradient(#013971, #000c18 60%);
+   background: -ms-linear-gradient(#013971, #000c18 60%); */
+   /* background: linear-gradient(#c2c1c2, #070d13 60%); */
+}
+
+header {
+  /* background: #201c29; */
+  background: rgb(8, 4, 15);
+  color: #ededed;;
+  padding: 20px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin-left: 40px;
+}
+
+.title p {
+  font-size: 13px;
+  font-style: italic;
+}
+
+
+/* ==============================
+          Search bar
+================================= */
+
+form {
+  box-shadow: 0 18px 10px -10px rgba(200, 200, 200, .5);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+input[type=search] {
+  width: 200px;
+  transition: all .5s;
+  outline: none;
+
+  /* background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center; */
+  border: solid 1px #ccc;
+  background: #ededed;
+	padding: 9px 10px 9px 32px;	
+	border-radius: 10em;
+}
+
+input[type=search]:focus {
+	width: 240px;
+	background-color: #fff;
+  border-color: #66CC75;
+  box-shadow: 0 0 5px rgba(109,207,246,.5);
+  outline: none;
+}
+
+/* remove all default Webkit search field styling; ex the x sign when typing in  */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+form input, form button[type="submit"] {
+  font-size: 1.2em;
+}
+
+form button[type="submit"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  color: rgb(102, 97, 97);
+  transition: all .3s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+  transform: scale(0.85);
+}
+
+/* ============================================================================
+          Display search results
+============================================================================== */
+
+main {
+  margin: 0 60px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 25px;
+  clear: both;
+}
+
+/* ========= sort buttons @the top right corner ========== */
+button {
+  cursor: pointer;
+}
+
+.sort-buttons {
+  margin: 15px 0;
+  float: right;
+}
+
+.sort-buttons button {
+  margin-right: 20px;
+  padding: 3px 8px;
+  border-radius: 10em;
+  text-align: center;
+  font-size: 14px;
+  outline: none;
+  background:#ededed;;
+  color: rgb(102, 97, 97);
+  transition: all .3s;
+}
+
+.sort-buttons button:hover, .icon:hover {
+  box-shadow: 0px 0px 8px 1.5px #888888;
+}
+
+.icon {
+  background-color: #ededed;;
+  color: rgb(102, 97, 97);
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* ========== Loading sign & No result page ============ */
+
+.loading-sign {
+  margin: 40px 0 0 40px;
+  font-size: 25px;
+  color: #524c4c;
+}
+
+.no-gifs {
+  /* background-color: rgba(224, 224, 223, 0.041); */
+  background-color: transparent;
+  grid-column: 3 / span 2;
+  justify-self: center;
+  /* margin-left: 40px; */
+/*   border-radius: 50%;
+  width: 500px;
+  height: 500px; */
+  color: #524c4c;
+  text-align: center;
+}
+
+.fa-robot {
+  font-size: 70px;
+  color: #524c4c;
+}
+
+.oops {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.no-result-found {
+  font-size: 30px;
+}
+
+.no-gifs p {
+  font-size: 18px;
+  color: rgb(145, 141, 141);
+}
+
+
+/* ============= Results area =============== */
+
+ul li {
+  list-style-type: none;
+  padding: 25px 30px 40px;
+  height: 350px;
+  /* background: #201c29c9; */
+  background: #2E3138;
+  margin-top: 35px;
+  transition: border .9s ease-in-out;
+  /* box-shadow: 0.5rem 1rem 1rem 0 rgba(66, 65, 65, 0.6); */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.coin-log-rank {
+  align-self: center;
+}
+
+ul li:hover {
+  /* background: rgba(36, 33, 33, 0.746); */
+  background: #698996;
+  border: 2px solid #fff; 
+}
+
+ul li i {
+  display: block;
+  text-align: center;
+  margin: 5px auto;  
+  font-size: 40px;
+  transition: transform .5s;
+}
+
+ul li:hover .cc {
+  transform: scale(1.4);
+}
+
+ul li .crypto-name {
+  text-align: center;
+  font-weight: 725;
+  color: rgb(240, 240, 240);
+}
+
+ul li .crypto-rank {
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+/* ul li:nth-child(even) {
+  background: #000;
+}
+
+ul li:nth-child(odd) {
+  background: #405a7a;
+} */
