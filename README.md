@@ -1,3 +1,3 @@
 # CryptoCurrencies-React
 
-**Published site at** <https://tata-paweennuch.github.io/CountriesSearch-API/>
+**Published site at** <https://Tata-paweennuch.github.io/CryptoCurrencies-React/>
